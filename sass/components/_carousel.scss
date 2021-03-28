@@ -1,0 +1,38 @@
+// Slider part
+.container {
+  height: 50vh;
+  width: 70%;
+  margin: 0 auto;
+  @include Flex-Column-Center;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+
+  button {
+    color: #242424;
+  }
+  i {
+    color: $color_twitter;
+    font-size: 3rem;
+  }
+  blockquote {
+    font-weight: 300;
+    margin: 2rem;
+  }
+  figcaption {
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    height: 100vh;
+    margin-top: 20rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    height: 60vh;
+    margin-top: 20rem;
+  }
+}

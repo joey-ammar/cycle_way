@@ -1,0 +1,132 @@
+nav {
+  height: 10vh;
+  @include Flex-Column-Center;
+  font-family: "Noto Sans JP", sans-serif;
+  ul {
+    height: 10vh;
+    @include Flex-Row-Center;
+    li {
+      margin-left: 3rem;
+    }
+    img {
+      width: 5rem;
+    }
+    a {
+      color: $color_Black_Light;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+  }
+  .bar {
+    display: none;
+  }
+}
+
+.Modal-Nav {
+  .cancel_Modal {
+    color: $color_White;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  display: none;
+  @include Full-Width-Height;
+  background-color: $color_Black_Light;
+  @include Position-Fixed;
+  ul {
+    @include Flex-Column-Center;
+    height: 100vh;
+    li {
+      margin: 2rem 0;
+    }
+    a {
+      color: $color_White;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  nav {
+    @include Flex-Column-Center;
+    ul {
+      height: 10vh;
+      @include Flex-Row-Space-Between;
+      width: 100%;
+      li {
+        margin-left: 3rem;
+      }
+      img {
+        width: 4rem;
+      }
+      a {
+        color: $color_Black_Light;
+        font-weight: 500;
+        font-size: 1.4rem;
+        margin-right: 3rem;
+        cursor: pointer;
+      }
+    }
+    .nav-link {
+      display: none;
+    }
+    .bar {
+      display: block;
+    }
+  }
+  .Modal-Nav {
+    .cancel_Modal {
+      margin-right: 2rem;
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+    ul {
+      height: 70vh;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  nav {
+    @include Flex-Column-Center;
+    ul {
+      height: 10vh;
+      @include Flex-Row-Space-Between;
+      width: 100%;
+      li {
+        margin-left: 3rem;
+      }
+      img {
+        width: 4rem;
+      }
+      a {
+        color: $color_Black_Light;
+        font-weight: 500;
+        font-size: 1.4rem;
+        margin-right: 3rem;
+        cursor: pointer;
+      }
+    }
+    .nav-link {
+      display: none;
+    }
+    .bar {
+      display: block;
+    }
+  }
+  .Modal-Nav {
+    .cancel_Modal {
+      margin-right: 2rem;
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+    ul {
+      height: 70vh;
+    }
+  }
+}

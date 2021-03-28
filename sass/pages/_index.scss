@@ -1,0 +1,560 @@
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   ABOUT 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+.about {
+  height: 60vh;
+  background-color: #eee;
+  @include Flex-Column-Center;
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: center;
+  &__icon {
+    width: 4rem;
+    text-align: center;
+  }
+  &__syntax {
+    width: 50%;
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 2rem 0;
+    }
+    p {
+      padding: 1rem 0rem;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .about {
+    height: 80vh;
+    &__syntax {
+      width: 80%;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .about {
+    height: 60vh;
+    &__syntax {
+      width: 60%;
+    }
+  }
+}
+
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   Oliva 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+
+.oliva {
+  @include sixty-Width-Height;
+  font-family: "Noto Sans JP", sans-serif;
+  &__inside {
+    @include sixty-Width-Height;
+    display: flex;
+    &--left {
+      width: 70%;
+      height: inherit;
+      background-image: url("../../images/img1.png");
+      @include Background-Image-Center;
+      background-position: center;
+      @include Flex-Column-Center;
+      img {
+        width: 8rem;
+      }
+    }
+    &--right {
+      width: 30%;
+      &--top {
+        height: 60%;
+        @include Flex-Column-Center;
+        text-align: center;
+        padding: 2rem;
+        img {
+          width: 3rem;
+        }
+        h1 {
+          color: $color_Black_Light;
+          margin: 1rem 0rem;
+          letter-spacing: 0.2rem;
+        }
+        p {
+          font-weight: 300;
+          line-height: 2rem;
+        }
+      }
+      &--bottom {
+        height: 40%;
+        background-image: url("../../images/img2.png");
+        @include Background-Image-Center;
+        background-position: center;
+      }
+    }
+  }
+}
+
+//Special Cases with diff images
+.boriosa {
+  background-image: url("../../images/img3.png");
+}
+.boriosa__two {
+  background-image: url("../../images/img5.png");
+}
+@media (max-width: 599px) {
+  .oliva {
+    @include Full-Width-Height;
+    &__inside {
+      @include Full-Width-Height;
+
+      display: flex;
+      flex-direction: column;
+      &--left {
+        width: 100%;
+        img {
+          width: 5rem;
+        }
+      }
+      &--right {
+        width: 100%;
+        &--top {
+          height: 40vh;
+        }
+        &--bottom {
+          height: 30vh;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .oliva {
+    @include Full-Width-Height;
+    &__inside {
+      @include Full-Width-Height;
+
+      display: flex;
+      flex-direction: column;
+      &--left {
+        width: 100%;
+        img {
+          width: 5rem;
+        }
+      }
+      &--right {
+        width: 100%;
+        &--top {
+          height: 40vh;
+        }
+        &--bottom {
+          height: 30vh;
+        }
+      }
+    }
+  }
+}
+
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   Hulot 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+
+.hulot {
+  @include sixty-Width-Height;
+  &__inside {
+    display: flex;
+    @include sixty-Width-Height;
+    &--left {
+      width: 30%;
+      height: inherit;
+      background-image: url("../../images/img6.png");
+      @include Background-Image-Center;
+      background-position: center;
+      @include Flex-Column-Center;
+      img {
+        width: 13rem;
+      }
+    }
+    &--middle {
+      width: 40%;
+      position: relative;
+      &--top {
+        height: 60%;
+        @include Flex-Column-Center;
+        text-align: center;
+        padding: 2rem;
+        img {
+          width: 3rem;
+        }
+        h1 {
+          color: $color_Black_Light;
+          margin: 1rem 0rem;
+          letter-spacing: 0.2rem;
+        }
+        p {
+          font-weight: 300;
+          line-height: 2rem;
+        }
+      }
+      &--bottom {
+        height: 40%;
+        background-image: url("../../images/img7.png");
+        @include Background-Image-Center;
+        background-position: center;
+      }
+    }
+    &--right {
+      width: 30%;
+      height: inherit;
+      background-image: url("../../images/img8.png");
+      @include Background-Image-Center;
+      background-position: center;
+      @include Flex-Column-Center;
+      img {
+        width: 13rem;
+      }
+    }
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $color_White;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 60%;
+    right: 49%;
+  }
+}
+
+@media (max-width: 599px) {
+  .hulot {
+    @include Full-Width-Height;
+    &__inside {
+      display: block;
+      @include Full-Width-Height;
+      &--left {
+        width: 100%;
+        height: 60%;
+        img {
+          width: 10rem;
+        }
+      }
+      &--middle {
+        width: 100%;
+      }
+      &--right {
+        width: 100%;
+        height: 60vh;
+      }
+    }
+    .triangle {
+      border-bottom: 10px solid $color_White;
+      top: 100%;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .hulot {
+    @include Full-Width-Height;
+    &__inside {
+      display: block;
+      @include Full-Width-Height;
+      &--left {
+        width: 100%;
+        height: 60%;
+        img {
+          width: 10rem;
+        }
+      }
+      &--middle {
+        width: 100%;
+      }
+      &--right {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+    .triangle {
+      border-bottom: 10px solid $color_White;
+      top: 100%;
+    }
+  }
+}
+
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   Gallery 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+.gallery {
+  @include sixty-Width-Height;
+  &__inside {
+    @include sixty-Width-Height;
+    display: flex;
+    /*
+      ###################
+      ##################
+      RIGHT
+    */
+    &--right {
+      width: 33.33%;
+      @include sixty-Width-Height;
+    }
+    .specialImageBg-1 {
+      background-image: url("../../images/img12.png");
+    }
+    .specialImageBg-2 {
+      background-image: url("../../images/img13.png");
+    }
+    .specialImageBg-3 {
+      background-image: url("../../images/img14.png");
+    }
+    /*
+      ###################
+      ##################
+      MIDDLE
+    */
+    &--middle {
+      width: 33.33%;
+      @include sixty-Width-Height;
+      display: flex;
+      &--left {
+        width: 50%;
+        height: 100%;
+        background-image: url("../../images/img10.png");
+        @include Background-Image-Center;
+        background-position: center;
+      }
+      &--right {
+        width: 50%;
+        height: 100%;
+        background-image: url("../../images/img11.png");
+        @include Background-Image-Center;
+        background-position: center;
+      }
+    }
+    /*
+      ###################
+      ##################
+      LEFT
+    */
+    &--left {
+      width: 33.33%;
+
+      @include sixty-Width-Height;
+      &--top {
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        &--top {
+          height: 100%;
+          width: 50%;
+          background-image: url("../../images/img1.png");
+          @include Background-Image-Center;
+          background-position: center;
+        }
+        &--down {
+          width: 50%;
+          height: 100%;
+          background-image: url("../../images/img9.png");
+          @include Background-Image-Center;
+          background-position: center;
+        }
+      }
+      &--bottom {
+        height: 50%;
+        width: 100%;
+        background-image: url("../../images/img3.png");
+        @include Background-Image-Center;
+        background-position: center;
+      }
+    }
+
+    /*
+      ###################
+      ##################
+      END
+    */
+  }
+}
+
+.overflow__container {
+  position: relative;
+}
+.ImageOverlay {
+  height: 30vh;
+  position: absolute;
+  background-color: rgba($color: $color_grnsh, $alpha: 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.ImageOverlaySyntax {
+  height: 30vh;
+  @include Flex-Column-Center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  a {
+    color: $color_White;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+  }
+  .smallIcon {
+    width: 5rem;
+  }
+}
+.gallery__inside--left--bottom:hover .ImageOverlay {
+  opacity: 1;
+}
+
+/*
+.ImageOverlay {
+  height: 30vh;
+  @include Flex-Column-Center;
+  background-color: rgba($color: $color_Black_Light, $alpha: 1);
+  h1  {
+    color: $color_White;
+  }
+}
+.smallIcon {
+  width: 3rem;
+  @include Flex-Column-Center;
+}
+*/
+@media (max-width: 599px) {
+  .gallery {
+    display: none;
+  }
+  .overflow__container,
+  .ImageOverlay,
+  .ImageOverlaySyntax,
+  .gallery__inside--left--bottom:hover .ImageOverlay {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .gallery {
+    display: none;
+  }
+  .overflow__container,
+  .ImageOverlay,
+  .ImageOverlaySyntax,
+  .gallery__inside--left--bottom:hover .ImageOverlay {
+    display: none;
+  }
+}
+
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   DISCOVER 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+
+.discover {
+  @include thrity-Width-Heigh;
+  background-color: $color_Black_Light;
+  &__inside {
+    height: inherit;
+    text-align: center;
+    @include Flex-Column-Center;
+  }
+}
+
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   DISCOVER 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+
+.form {
+  @include sixty-Width-Height;
+  background-color: $color_white_gr;
+  font-family: "Noto Sans JP", sans-serif;
+  &__inside {
+    height: inherit;
+    text-align: center;
+    @include Flex-Column-Center;
+    img {
+      width: 6rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.4rem;
+      padding: 2rem 0 5rem 0rem;
+      font-style: italic;
+    }
+    input {
+      padding: 1.5rem 3rem;
+      outline: none;
+      background-color: transparent;
+      border: 1px solid #999;
+      margin-right: 0.3rem;
+    }
+    a {
+      background-color: $color_grnsh;
+      padding: 1.52rem 2rem;
+      color: $color_White;
+    }
+    .form_settle {
+      display: flex;
+      height: 2rem;
+      align-items: center;
+    }
+    ::placeholder {
+      font-style: italic;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      outline: none;
+    }
+  }
+}

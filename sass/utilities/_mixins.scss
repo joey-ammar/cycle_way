@@ -1,0 +1,47 @@
+// Height and Width
+@mixin Full-Width-Height {
+  width: 100%;
+  height: 100vh;
+}
+@mixin sixty-Width-Height {
+  width: 100%;
+  height: 60vh;
+}
+@mixin thrity-Width-Heigh {
+  height: 30vh;
+  width: 100%;
+}
+
+// Position
+@mixin Flex-Column-Center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin Flex-Row-Center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@mixin Flex-Row-Space-Between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin Position-Fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// Background
+
+@mixin Background-Image-Center {
+  background-position: 40% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

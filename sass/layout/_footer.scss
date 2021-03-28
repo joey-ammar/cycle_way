@@ -1,0 +1,78 @@
+/*
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   Footer 
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+   *********************************************************************************
+*/
+
+.footer {
+  @include thrity-Width-Heigh;
+  font-family: "Noto Sans JP", sans-serif;
+  &__inside {
+    @include thrity-Width-Heigh;
+    @include Flex-Row-Space-Between;
+    justify-content: space-around;
+    p {
+      font-size: 1.5rem;
+    }
+    ul {
+      margin-left: 6rem;
+      a {
+        margin-left: 1rem;
+        color: white;
+      }
+    }
+  }
+  .right p {
+    font-size: 1rem;
+  }
+  .fa-facebook-f,
+  .fa-twitter,
+  .fa-instagram {
+    border-radius: 10rem;
+    font-size: 1.6rem;
+  }
+  .fa-twitter {
+    background-color: $color_twitter;
+    padding: 0.6rem 0.6rem;
+    border: 1px solid $color_twitter;
+  }
+  .fa-facebook-f {
+    background-color: $color_facebook;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid $color_facebook;
+  }
+  .fa-instagram {
+    background-color: $color_instagram;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid $color_instagram;
+  }
+}
+
+@media (max-width: 599px) {
+  .footer {
+    @include thrity-Width-Heigh;
+    &__inside {
+      @include thrity-Width-Heigh;
+      @include Flex-Column-Center;
+      text-align: center;
+      p {
+        font-size: 1.5rem;
+      }
+      ul {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 6rem;
+        a {
+          margin-left: 1rem;
+          color: white;
+        }
+      }
+    }
+  }
+}
