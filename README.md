@@ -1,13 +1,19 @@
-# cycle_way
+# Cycle way Project
 
+      ***Description:***
 
+A static webpage for presenting a vintage and old bikes.
 
-Project Title : Project Cycle way
+**Website:**
 
-Technologies used : 1 - HTML 2 - CSS 3 - Sass 4 - Javascript 5 - Javascript library
+[https://cycle-way.netlify.app/](https://cycle-way.netlify.app/)
 
-Project live: https://cycle-way.netlify.app/#
+***GitHub:***
 
-Description: Landing page with slider 
+[https://github.com/joey-ammar/cycle_way](https://github.com/joey-ammar/cycle_way)
 
-More in depth: - sliders, Css animations.
+***Stack***
+
+JavaScript -  HTML - CSS - SASS
+
+![CYCLE](https://user-images.githubusercontent.com/66380080/123962067-57c68980-d9b1-11eb-9485-314f02ec3a8b.png)
